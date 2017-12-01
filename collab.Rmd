@@ -5,6 +5,26 @@ output: html_document
 
 #This is our analysis for this afternoon
 ```{r}
+library(dplyr)
+library(ggplot2)
+View(mpg)
+ggplot(data = mpg, aes(x=year, y=displ, color=hwy))+
+  geom_line()
+
+```
+
+#NYC Flight Data
+
+```{r}
+library(tidyverse)
+library(nycflights13) #install.packages("nycflights13")
+flights
+
+#Jan 1 data
+flights %>% 
+  filter(month==1,
+         day==1)
+
 
 ```
 
